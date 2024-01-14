@@ -1,3 +1,7 @@
+This is a dump of my dub-like build tool written in 2019 for my game engine project I was writing in D back then. The codebase has not been cleaned so there might be a lot of uncommented old code and comments everywhere. The main focus of this project was to provide quick compilation times while iterating the project. At the time, building the project with dub used to take up to 10 seconds every time I made a small change to the project. With this tool, if my memory serves me right, it only took 1-2 seconds to build the project (in `--buildMode=package`) and start debugging it right away, which was a huge improvement.
+
+---
+
 Notable differences compared to Dub:
 - All packages gets compiled under one shared build directory, nothing is stored elsewhere.
 - Compiling and linking are done separately.
