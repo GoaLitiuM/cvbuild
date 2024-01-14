@@ -1,0 +1,7 @@
+{
+	"name": "beta",
+	"targetType": "staticLibrary",
+	"dependencies": {
+		"secondary": { "path": "./secondary" }
+	}
+}

@@ -1,0 +1,33 @@
+{
+	"name": "primary",
+	"targetType": "library",
+	"dependencies": {
+		"primary:primaryone": "*",
+		"primary:primarytwo": "*"
+	},
+	"excludedSourceFiles": [
+		"source/excluded.d"
+	],
+	"subPackages": [
+		{
+			"name": "primaryone",
+			"targetType": "library",
+			"sourcePaths": [
+				"primaryone/source"
+			],
+			"importPaths": [
+				"primaryone/source"
+			]
+		},
+		{
+			"name": "primarytwo",
+			"targetType": "library",
+			"sourcePaths": [
+				"primarytwo/source"
+			],
+			"importPaths": [
+				"primarytwo/source"
+			]
+		}
+	]
+}

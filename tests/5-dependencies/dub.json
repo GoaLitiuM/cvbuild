@@ -1,0 +1,8 @@
+{
+	"name": "test",
+	"dependencies": {
+		"sourcelib": { "path": "sourceLibrary/" },
+		"dynamiclib": { "path": "dynamicLibrary/" },
+		"staticlib": { "path": "staticLibrary/" }
+	}
+}

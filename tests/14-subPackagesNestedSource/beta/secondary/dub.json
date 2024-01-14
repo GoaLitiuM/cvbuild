@@ -1,0 +1,31 @@
+{
+	"name": "secondary",
+	"targetType": "staticLibrary",
+	"dependencies": {
+		"secondary:main": "*"
+	},
+	"subPackages": [
+		{
+			"name": "main",
+			"targetType": "staticLibrary",
+			"dependencies": {
+				"secondary:sub": ">=0.0.0"
+			},
+			"importPaths": [ "code" ],
+			"sourcePaths": [ "code" ],
+
+			"excludedSourceFiles": [
+				"code/sub/*"
+			]
+		},
+		{
+			"name": "sub",
+			"targetType": "staticLibrary",
+			"importPaths": [ "code/sub" ],
+			"sourcePaths": [ "code/sub" ],
+			"excludedSourceFiles": [
+				"code/sub/excluded.d"
+			]
+		}
+	]
+}

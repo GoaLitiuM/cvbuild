@@ -1,0 +1,6 @@
+{
+	"name": "sub2",
+	"dependencies": {
+		"unit-threaded:assertions": ">=0.8.0 <0.10.0"
+	}
+}

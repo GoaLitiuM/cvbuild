@@ -1,0 +1,7 @@
+{
+	"name": "sub",
+	"targetType": "executable",
+	"dependencies": {
+		"commondep": { "path": "../commondep/" }
+	}
+}

@@ -1,0 +1,11 @@
+{
+	"name": "testlib",
+	"targetType": "staticLibrary",
+	"versions": [ "dep_version" ],
+	"dflags-dmd": [ "-version=dep_dflag"],
+	"dflags-ldc": [ "-d-version=dep_dflag"],
+	"dflags-gdc": [ "-fversion=dep_dflag"],
+	"lflags-dmd": [ "-version=dep_lflag"],
+	"lflags-ldc": [ "-d-version=dep_lflag"],
+	"lflags-gdc": [ "-fversion=dep_lflag"]
+}

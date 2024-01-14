@@ -1,0 +1,6 @@
+{
+	"name": "test",
+	"dependencies": {
+		"requests": "==1.0.11"
+	}
+}

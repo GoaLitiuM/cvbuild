@@ -1,0 +1,12 @@
+{
+	"name": "test",
+	"targetType": "executable",
+	"versions": [
+		"test_feature_a",
+		"6"
+	],
+	"debugVersions": [
+		"test_debug_a",
+		"8"
+	]
+}

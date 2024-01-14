@@ -1,0 +1,10 @@
+{
+	"name": "test",
+	"targetType": "executable",
+	"dependencies": {
+		"test:beta": "*"
+	},
+	"subPackages": [
+		"./beta"
+	]
+}

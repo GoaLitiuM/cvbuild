@@ -1,0 +1,7 @@
+{
+	"name": "alpha",
+	"targetType": "library",
+	"dependencies": {
+		"primary": { "path": "./primary" }
+	}
+}

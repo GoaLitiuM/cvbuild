@@ -1,0 +1,37 @@
+{
+	"name": "test",
+	"targetType": "executable",
+	"dependencies": {
+		"testlib": { "path": "testlib/" }
+	},
+	"configurations": [
+		{
+			"name": "main",
+			"targetType": "executable",
+			"dflags-dmd": [ "-version=config_dflag"],
+			"dflags-ldc": [ "-d-version=config_dflag"],
+			"dflags-gdc": [ "-fversion=config_dflag"],
+			"versions": [ "config_version"]
+		},
+		{
+			"name": "sub",
+			"targetType": "executable",
+			"dflags-dmd": [ "-version=wrong_dflag"],
+			"dflags-ldc": [ "-d-version=wrong_dflag"],
+			"dflags-gdc": [ "-fversion=wrong_dflag"],
+			"versions": [ "wrong_version"]
+		}
+	],
+	"dflags-dmd": [ "-version=main_dflag"],
+	"dflags-ldc": [ "-d-version=main_dflag"],
+	"dflags-gdc": [ "-fversion=main_dflag"],
+	"versions": [ "main_version"],
+	"buildTypes": {
+		"debug": {
+			"dflags-dmd": [ "-version=buildtype_dflag"],
+			"dflags-ldc": [ "-d-version=buildtype_dflag"],
+			"dflags-gdc": [ "-fversion=buildtype_dflag"],
+			"versions": [ "buildtype_version"]
+		}
+	}
+}

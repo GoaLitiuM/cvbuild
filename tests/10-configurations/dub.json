@@ -1,0 +1,9 @@
+{
+	"name": "test",
+	"dependencies": {
+		"testlib": { "path": "testlib/" }
+	},
+	"subConfigurations": {
+		"testlib": "config_right"
+	}
+}

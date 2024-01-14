@@ -1,0 +1,7 @@
+{
+	"name": "test",
+	"targetType": "executable",
+	"dependencies": {
+		"sublib": { "path": "./sublib" }
+	}
+}

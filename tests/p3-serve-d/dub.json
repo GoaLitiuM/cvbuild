@@ -1,0 +1,8 @@
+{
+	"name": "test",
+	"description": "workspace-d 3.4.1 does not build with DMD anymore",
+	"dependencies": {
+		"serve-d": "==0.5.1",
+		"workspace-d": "==3.4.0"
+	}
+}

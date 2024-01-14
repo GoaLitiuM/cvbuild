@@ -1,0 +1,109 @@
+Notable differences compared to Dub:
+- All packages gets compiled under one shared build directory, nothing is stored elsewhere.
+- Compiling and linking are done separately.
+- Default build mode splits the compilation in per package basis for better parallelization and faster incremental builds, avoiding the rebuild of whole package in most scenarios.
+
+Compatibility Notes:
+- "dflags" do not get translated to other options like in dub, please make sure to use the documented dub options over switches like "-debug", "-version", "-I", "-J", "-unittest", "-betterC" or "-w".
+- Separate linking is more strict regards to duplicate object files, which may cause linking issues in some cases.
+
+New features:
+- `--jobs` for more finetuned control over parallelization (uses all cores by default).
+- Support building executable dependencies.
+- `--buildMode` (`--buildModeDeps` for dependencies):
+	- `=package`: builds each module package in project (default)
+	- `=project`: builds the whole project (matches dub's `separate`)
+	- `=module`: builds each module in project
+-
+
+Implemented Dub features:
+- [x] parse dub.json
+- [x] parse dub.sdl
+- [ ] dub.selections.json
+- CLI:
+	- [x] build
+		- [x] local package
+		- [x] local subPackage
+		- [x] dependencies from dub package cache
+		- [ ] cached package
+		- [x] `--build`
+		- [x] `--force` (also `--rebuild`)
+		- [x] `--config`
+		- [ ] `--override-config` for dependency
+		- [x] `--compiler`
+		- [x] `--arch`
+		- [ ] `--debug`
+		- [ ] `--nodeps`?
+		- [x] `--build-mode` (translated to `--buildMode`)
+		- [ ] `--single`
+		- [ ] `--filter-versions`?
+		- [ ] `--combined`?
+		- [x] `--parallel` (not needed, replaced by `--jobs`)
+	- [ ] run (--run)
+		- [ ] `--temp-build`?
+		- [ ] `--rdmd`?
+	- [ ] test
+		- [ ] `--main-file`
+		- [ ] `--coverage`
+	- [x] clean (--clean)
+	- [ ] lint?
+	- [ ] describe
+	- [ ] dustmite?
+	- [ ] dub passthrough for other commands (fetch, add, upgrade, all package management related commands)
+	- [ ] registry related options (used with dub passthrough)
+	- [ ] `--root`
+	- [ ] `--annotate`
+	- [ ] `--bare`
+	- [ ] `--cache` (override dub package cache location)
+- Dub package configuration:
+	- [ ] environment variables (``$PACKAGE_DIR``, ``$ARCH``, ``$DFLAGS`` etc.)
+	- [ ] toolchainRequirements
+	- [x] subPackages
+		- [x] "path" variant (external recipe)
+		- [x] in root package
+	- [x] configurations
+		- [x] platform-specific options
+	- [x] buildTypes
+	- [ ] ddoxFilterArgs?
+	- [x] buildSettings:
+		- [x] dependencies
+			- [x] version* (with very basic dependency resolver)
+			- [x] path
+			- [ ] optional
+			- [ ] default
+		- [ ] systemDependencies?
+		- [x] targetType
+			- [x] none
+			- [x] executable
+			- [x] staticLibrary
+			- [x] sourceLibrary
+			- [ ] dynamicLibrary
+		- [ ] targetPath
+		- [ ] workingDirectory
+		- [x] subConfigurations
+		- [ ] buildRequirements
+		- [x] buildOptions
+			- [x] dmd compiler support
+			- [x] ldc2 compiler support
+			- [ ] gdc compiler support
+		- [x] libs
+		- [x] sourceFiles
+		- [x] sourcePaths
+		- [x] excludedSourceFiles
+		- [x] mainSourceFile
+		- [ ] copyFiles
+		- [x] versions
+		- [x] debugVersions
+		- [x] importPaths
+		- [x] stringImportPaths
+		- [ ] preGenerateCommands
+		- [ ] postGenerateCommands
+		- [ ] preBuildCommands
+		- [ ] postBuildCommands
+		- [ ] preRunCommands
+		- [ ] postRunCommands
+		- [x] dflags
+		- [x] lflags
+		- [ ] extraDependencyFiles?
+		- [ ] -versionFilters?
+		- [ ] -debugVersionFilters?

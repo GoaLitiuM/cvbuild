@@ -1,0 +1,10 @@
+{
+	"name": "test",
+	"targetType": "executable",
+	"sourcePaths": [],
+	"sourceFiles": [
+		"app.d",
+		"okwriter.d"
+	],
+	"importPaths": [ "." ]
+}

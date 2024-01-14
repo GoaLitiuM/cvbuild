@@ -1,0 +1,14 @@
+ok, dflags
+ok, buildtype dflags
+ok, configuration dflags
+ok, versions
+ok, buildtype versions
+ok, configuration versions
+ok, dependency version propagating to parent
+ok, dependency version
+fail, dflags not propagating
+fail, buildtype dflags not propagating
+fail, configuration dflags not propagating
+fail, versions not propagating
+fail, buildtype versions not propagating
+fail, configuration versions not propagating

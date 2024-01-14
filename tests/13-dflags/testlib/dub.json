@@ -1,0 +1,5 @@
+{
+	"name": "testlib",
+	"targetType": "staticLibrary",
+	"versions": [ "dep_version" ]
+}

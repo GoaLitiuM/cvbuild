@@ -1,0 +1,14 @@
+{
+	"name": "test",
+	"targetType": "executable",
+	"versions": ["feature_version"],
+	"buildTypes": {
+		"debug": {
+			"buildOptions": ["releaseMode"],
+			"versions": ["buildtype_feature_version"]
+		},
+		"release": {
+			"buildOptions": ["debugMode"]
+		}
+	}
+}

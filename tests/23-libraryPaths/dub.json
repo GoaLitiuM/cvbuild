@@ -1,0 +1,5 @@
+{
+	"name": "test",
+	"libs-windows": [ "kernel32", "user32"],
+	"libs-linux": [ "m", "pthread"]
+}

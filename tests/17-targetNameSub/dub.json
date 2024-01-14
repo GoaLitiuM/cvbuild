@@ -1,0 +1,16 @@
+{
+	"name": "testpackage",
+	"targetType": "executable",
+	"dependencies": {
+		"testpackage:main": "*"
+	},
+	"subPackages": [
+		{
+			"name": "main",
+			"targetType": "executable",
+			"targetName": "test",
+			"sourcePaths": [ "sourcemain" ],
+			"importPaths": [ "sourcemain" ]
+		}
+	]
+}

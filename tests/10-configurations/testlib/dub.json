@@ -1,0 +1,30 @@
+{
+	"name": "testlib",
+	"targetType": "staticLibrary",
+	"versions": [
+		"version_main"
+	],
+	"configurations": [
+		{
+			"name": "config_default",
+			"versions": [
+				"version_default"
+			]
+		},
+		{
+			"name": "config_wrong",
+			"versions": [
+				"version_wrong"
+			]
+		},
+		{
+			"name": "config_right",
+			"versions": [
+				"version_right"
+			]
+		},
+		{
+			"name": "config_last"
+		}
+	]
+}

@@ -1,0 +1,26 @@
+{
+	"name": "test",
+	"dependencies": {
+		"arsd-official:simpledisplay": "*",
+		"arsd-official:minigui": "*",
+		"arsd-official:nanovega": "*",
+		"arsd-official:email": "*",
+		"arsd-official:image_files": "*",
+		"arsd-official:png": "*",
+		"arsd-official:htmltotext": "*",
+		"arsd-official:dom": "*",
+		"arsd-official:characterencodings": "*",
+		"arsd-official:cgi": "*",
+		"arsd-official:mssql": "*",
+		"arsd-official:http": "*",
+		"arsd-official:jsvar": "*",
+		"arsd-official:script": "*",
+		"arsd-official:terminal": "*",
+		"arsd-official:ttf": "*",
+		"arsd-official:color_base": "*",
+		"arsd-official:database_base": "*"
+	},
+	"subConfigurations": {
+		"arsd-official:http": "without_openssl"
+	}
+}

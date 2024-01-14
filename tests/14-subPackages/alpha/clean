@@ -1,0 +1,4 @@
+test_testlib.lib
+test_testlib.a
+test_testsub1.lib
+test_testsub1.a

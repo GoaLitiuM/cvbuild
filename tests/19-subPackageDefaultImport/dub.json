@@ -1,0 +1,17 @@
+{
+	"name": "test",
+	"dependencies": {
+		"test:sub": "*"
+	},
+	"targetType": "none",
+	"subPackages": [
+		{
+			"name": "sub",
+			"targetType": "executable",
+			"targetName": "test",
+			"sourcePaths": [
+				"subsource"
+			]
+		}
+	]
+}
